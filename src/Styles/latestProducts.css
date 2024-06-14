@@ -1,5 +1,23 @@
+.category_img {
+    padding: 0px;
+    height: 200px;
+}
+
 .product-category {
-    font-size: 1rem; 
-    font-weight: bold; 
-    padding: 0.3rem; 
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-category:hover {
+    border-color: #3bb307;
+    color: #3bb307;
+}
+
+@media (max-width: 767px) {
+    .product-category {
+        display: inline-block;
+        margin: 0.2rem 0;
+    }
 }

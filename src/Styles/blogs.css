@@ -1,0 +1,11 @@
+.gray-bg {
+    background-color: #ebf4fa;
+}
+
+.blog-img {
+    transition: transform 0.3s ease;
+}
+
+.blog-img:hover {
+    transform: scale(1.1);
+}
