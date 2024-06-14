@@ -1,0 +1,14 @@
+/* Slider */
+.carousel-caption {
+    color: black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider_img {
+    height: 450px;
+    object-fit: cover;
+}
+.container-fluid{
+    height: 460px;
+}
