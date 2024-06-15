@@ -8,7 +8,7 @@ const TopBar = () => {
                 <div className="container d-flex justify-content-between align-items-center">
                     <div>
                         <i className="fa fa-phone me-2"></i>1-888-345-6789
-                        <i className="fa fa-envelope ms-3 me-2"></i>contact@example.com
+                        <i className="fa fa-envelope ms-3 me-2"></i>techcart@gmail.com
                     </div>
                     <div className="d-flex align-items-center">
                         <div className="dropdown me-3">
