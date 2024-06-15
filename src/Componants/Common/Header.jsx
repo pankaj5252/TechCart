@@ -1,12 +1,24 @@
-import React from 'react';
+// Header.js
+
+import React, { useState } from 'react';
 import Logo from '../../Assets/Images/Logo.png';
 import { NavLink } from 'react-router-dom';
 import '../../Styles/header.css';
 
 const Header = () => {
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
+
+  const handleCategoriesHover = () => {
+    setIsCategoriesOpen(true);
+  };
+
+  const handleCategoriesLeave = () => {
+    setIsCategoriesOpen(false);
+  };
+
   return (
-    <header className="header">
-      <nav className="navbar navbar-expand-lg p-0">
+    <header className="header sticky-top">
+      <nav className="navbar navbar-expand-lg bg-white p-0">
         <div className="container">
           <NavLink to="/" className="navbar-brand">
             <img src={Logo} className="img-fluid logo" alt="TechCart Logo" />
@@ -17,24 +29,24 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink exact to="/" className="nav-link nav-link-custom" activeClassName="active" aria-current="page">Home</NavLink>
+                <NavLink exact to="/" className="nav-link nav-link-custom" activeclass="active" aria-current="page">Home</NavLink>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" onMouseEnter={handleCategoriesHover} onMouseLeave={handleCategoriesLeave}>
                 <NavLink to="#" className="nav-link nav-link-custom dropdown-toggle" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   All Categories
                 </NavLink>
-                <ul className="dropdown-menu" aria-labelledby="categoriesDropdown">
-                  <li><NavLink to="/category1" className="dropdown-item">Category 1</NavLink></li>
+                <ul className={`dropdown-menu ${isCategoriesOpen ? 'show' : ''}`} aria-labelledby="categoriesDropdown">
+                  <li><NavLink to="/Vegetables_Fruits" className="dropdown-item">Vegetables & Fruits</NavLink></li>
                   <li><NavLink to="/category2" className="dropdown-item">Category 2</NavLink></li>
                   <li><NavLink to="/category3" className="dropdown-item">Category 3</NavLink></li>
                   <li><NavLink to="/category4" className="dropdown-item">Category 4</NavLink></li>
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink to="/about" className="nav-link nav-link-custom" activeClassName="active">About</NavLink>
+                <NavLink to="/about" className="nav-link nav-link-custom" activeclass="active">About</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/contact" className="nav-link nav-link-custom" activeClassName="active">Contact Us</NavLink>
+                <NavLink to="/contact" className="nav-link nav-link-custom" activeclass="active">Contact Us</NavLink>
               </li>
             </ul>
             <form className="d-flex me-3 flex-grow-1 flex-md-grow-0 search-form">

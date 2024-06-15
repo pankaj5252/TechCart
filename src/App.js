@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import './App.css'
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Componants/Common/Header';
 import Footer from './Componants/Common/Footer';
@@ -8,6 +8,7 @@ import Home from './Componants/Home';
 import About from './Componants/About';
 import NotFound from './Componants/NotFound';
 import TopBar from './Componants/Common/TopBar';
+import VegetablesFruits from './Componants/Categories/Vegetables_Fruits.jsx';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Vegetables_Fruits" element={<VegetablesFruits />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

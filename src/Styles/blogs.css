@@ -9,3 +9,61 @@
 .blog-img:hover {
     transform: scale(1.1);
 }
+
+#blog {
+    padding-bottom: 60px;
+}
+
+.card {
+    position: relative;
+}
+
+.blog-img {
+    object-fit: cover;
+}
+
+.position-absolute {
+    z-index: 10;
+}
+
+@media (max-width: 576px) {
+    .card-body h5 {
+        font-size: 16px;
+    }
+
+    .card-body p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .card-body h5 {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-body h5 {
+        font-size: 20px;
+    }
+
+    .card-body p {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+}

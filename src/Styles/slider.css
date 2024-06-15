@@ -9,6 +9,11 @@
     height: 450px;
     object-fit: cover;
 }
-.container-fluid{
+
+.container-fluid {
     height: 460px;
+}
+
+.dropdown-menu {
+    border: 0;
 }
